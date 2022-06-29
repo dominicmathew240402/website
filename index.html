@@ -1,0 +1,104 @@
+<!--This coding is user in hosting firebase-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Smart Plant</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.8.4/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.8.4/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.8.4/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.8.4/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.8.4/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.8.4/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.8.4/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.8.4/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.8.4/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.8.4/firebase-performance-compat.js"></script>
+
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    </style>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/css/LoginPage.css" />
+
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
+  </head>
+
+  <body style="display: flex; flex-direction: column">
+    <div class="login-page login-page-block layout">
+      <div class="login-page-group layout1">
+        <div style="--src:url(/assets/c274960042d2dcd172d6374d73fc15e1.png)" class="login-page-decorator layout"></div>
+        <div class="login-page-group layout">
+          <div style="--src:url(/assets/59bcefb04e5ab3aea85e55db98bc0b7a.png)" class="login-page-image layout"></div>
+          <div class="login-page-flex layout">
+            <div class="login-page-flex-item"><h1 class="login-page-hero-title1 layout">Smart Plant</h1></div>
+            <div class="login-page-flex-spacer"></div>
+            <div class="login-page-flex-item1">
+              <div class="login-page-flex1 layout">
+                <h1 class="login-page-hero-title layout">Login</h1>
+
+                <div class="login-page-block1 layout">
+                  <hr class="login-page-line layout" />
+                  <h2 class="login-page-medium-title layout">Username</h2>
+                  <input type = "Text" placeholder="Enter Username" name="uname" required>
+                </div>
+
+                <div class="login-page-block2 layout">
+                  <hr class="login-page-line1 layout" />
+                  <h2 class="login-page-medium-title layout1">Password</h2>
+                  <input type = "Password" placeholder="Enter Password" name="psw" required>
+                </div>
+
+                <h3 class="login-page-subtitle layout">Forget Password ?</h3>
+                <a href="DashboardPlant.html" style="text-decoration: none;">
+                <div class="login-page-block3 layout"><h2 class="login-page-medium-title1 layout">LOGIN</h2></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      AOS.init();
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
