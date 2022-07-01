@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/css/DashFull.css" />
+
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
+  </head>
+
+  <body style="display: flex; flex-direction: column">
+    <div class="dash-full dash-full-block layout">
+      <div class="dash-full-flex layout">
+            <div class ="outer-grid">
+            <div><!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+            {
+            "symbol": "COINBASE:ETHUSD",
+            "locale": "en",
+            "dateRange": "5M",
+            "colorTheme": "light",
+            "trendLineColor": "rgba(41, 98, 255, 1)",
+            "underLineColor": "rgba(41, 98, 255, 0.3)",
+            "underLineBottomColor": "rgba(41, 98, 255, 0)",
+            "isTransparent": false,
+            "autosize": false,
+            "largeChartUrl": ""
+            }
+            </script>
+            </div>
+        <!--Layout for Graph-->
+        <div class="dash-full-block2 layout">
+        </div> 
+        <!--Layout for Graph-->
+
+        <div class="dash-full-flex1 layout">
+          <div class="dash-full-flex1-item">
+            <div class="dash-full-block1 layout">
+              <div class="dash-full-flex2 layout">
+                <div class="dash-full-flex3 layout">
+                  <div class="dash-full-flex3-item">
+                    <div class="dash-full-cover-block1 layout">
+                      <h5 class="dash-full-highlights layout">Temperature</h5>
+                    </div>
+                  </div>
+                  <div class="dash-full-flex3-spacer"></div>
+                  <div class="dash-full-flex3-item1">
+                    <div class="dash-full-cover-block layout"><h5 class="dash-full-highlights layout1">Lights</h5></div>
+                  </div>
+                </div>
+                <div class="dash-full-flex4 layout">
+                  <div class="dash-full-flex4-item">
+                    <div class="dash-full-cover-block1 layout1">
+                      <h5 class="dash-full-highlights layout2">Irrigation</h5>
+                    </div>
+                  </div>
+                  <div class="dash-full-flex4-spacer"></div>
+                  <div class="dash-full-flex4-item1">
+                    <div class="dash-full-cover-block layout1">
+                      <h5 class="dash-full-highlights layout3">pH Level</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dash-full-flex1-spacer"></div>
+          <div class="dash-full-flex1-item1"><div class="dash-full-block3 layout"></div></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      AOS.init();
+    </script>
+  </body>
+</html>
