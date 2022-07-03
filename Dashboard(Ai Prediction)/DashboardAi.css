@@ -1,0 +1,64 @@
+html {
+    scroll-behavior: smooth;
+}
+a.nav-link {
+    opacity: 0.75 !important;
+    color: white !important;
+}
+a.nav-link:hover {
+    opacity: 1 !important;
+}
+.custom-bg-color { /* Nav Layout 1 */
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 36px;
+    width: 1000px;
+}
+.custom-bg-color-2 { /* Nav Layout 2 */
+    background-color: #e6e6e6;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+body {
+    background-color: #f2f2f2;
+}
+.custom-font {
+    font-family: 'Signika', sans-serif;
+}
+.card-custom-preview {
+    max-width: 250px;
+    width: 25rem;
+}
+.card-custom {
+    width: 25rem;
+}
+.crops-list-tab { /* Navigation Header Word */
+    color: black;
+    text-align: center;
+}
+.nav-tabs .nav-link.active {
+    color: #222222; /* Font word in the nav menu */
+    background-color: turquoise;
+    border-color: #dee2e6 #dee2e6 turquoise;
+}
+h1.h1-ai-image {
+    font-size: 26px;
+    color: black;
+    position: relative;
+    right: -180px;
+    padding-bottom: 40px;
+}
+div.container-ai-image {
+    color: black;
+    position: relative;
+    left: 400px;
+    top: 40px;
+    padding-bottom: 60px;
+}
+ul.plant-list {
+    color: black;
+}
+div#show-data {
+    padding-bottom: 0px;
+    position: relative;
+    left: 200px;
+}
