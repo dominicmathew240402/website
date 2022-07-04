@@ -2,32 +2,32 @@ body {
 	background: #f2f2f2;
 }
 .outer-grid > div {
-	color: white;
-	padding: 20px;
+	padding: 20px; 
 }
 div.outer-grid {
 	display: block;
 	background-color: white;
 	border-radius: 25px 25px 25px 25px;
-	width: 400px;
-    height: 240px;
-    margin-left: 240px;
-    margin-top: -400px;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.15), 
+	width: 580px;
+  height: 240px;
+  margin-left: 210px;
+  margin-top: -535px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.15), 
               0px 4px 8px rgba(0,0,0,0.15), 
               0px 8px 16px rgba(0,0,0,0.15), 
               0px 16px 32px rgba(0,0,0,0.15);
 }
 /* Just a Cointainer */
 div.tradingview-widget-container {
-	width: 360px;
+	width: 400px;
     height: 200px;
     margin-left: 0px;
 }
 /* Trading View Layout */
 iframe {
-	width: 360px;
-    height: 200px;
+	width: 540px;
+  height: 200px;
+  margin-bottom: -850px;
 }
 
 /* Column Area*/
@@ -42,11 +42,12 @@ iframe {
   display: table;
   clear: both;
 }
+
 div.row {
 	width: 400px;
 	display: inline-block;
 	margin-left: -20px;
-	margin-top: -10px;
+	margin-top: 335px;
 }
 div.column1 {
 	width: 280px;
@@ -115,6 +116,16 @@ p.p4 {
 	top: 8px;
 	color: black;
 }
+@media (max-width: 1180px) {
+  div.row {
+    margin-top: 360px;
+  }
+  iframe {
+  width: 500px;
+  height: 200px;
+  margin-bottom: -850px;
+  }
+}
 
 /******************** Side Nav Bar  **************************/
 * {
@@ -127,7 +138,7 @@ p.p4 {
 .header {
   width: 100%;
   height: 100%;
-  background: #0d74f5;
+ /* background: #0d74f5; */
 }
 
 .side-nav {
@@ -142,7 +153,7 @@ p.p4 {
 }
 .logo {
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   margin-left: 20px ;
 }
 .logo-img {
@@ -153,7 +164,7 @@ p.p4 {
   position: relative;
 }
 .nav-links li {
-  padding: 10px 0;
+  padding: 18px 0;
 }
 .nav-links li a {
   color: #fff;
@@ -206,17 +217,39 @@ p.p4 {
 }
 /* Ipad Air */
 @media (max-width: 1180px) {
+  div.outer-grid {
+    margin-top: -540px;
+    margin-left: 200px;
+  }
   .side-nav{
     width: 200px;
   }
+  nav.links li {
+    padding-bottom: 12px 0;
+  }
   .logo {
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-left: 20px ;
   }
   .logo-img {
     width: 100px;
   }
+  .nav-links li:nth-child(1):hover ~ .active{
+  top: 3%;
+}
+.nav-links li:nth-child(2):hover ~ .active{
+  top: 22%;
+}
+.nav-links li:nth-child(3):hover ~ .active{
+  top: 44%;
+}
+.nav-links li:nth-child(4):hover ~ .active{
+  top: 64%;
+}
+.nav-links li:nth-child(5):hover ~ .active{
+  top: 84%;
+}
 }
 /* My iPhone */
 @media (max-width: 379px) {
@@ -265,7 +298,7 @@ p.p4 {
 .switch {
   position: relative;
   display: inline-block;
-  width: 80px;
+  width: 60px;
   height: 34px;
 } 
 
@@ -312,7 +345,7 @@ input:focus + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
-  transform: translateX(48px);
+  transform: translateX(28px);
 }
 .slider:after{
    content:'OFF';
@@ -339,12 +372,6 @@ input:checked + .slider:after {
 .slider.round:before {
   border-radius: 50%;
 }
-
-.container {
-  display: flex;
-  flex-direction: row;
-  margin: 50px 50px 50px 50px;
-}
 div.container1 {
 	margin-left: 180px;
 	margin-top: 10px;
@@ -360,4 +387,124 @@ div.container3 {
 div.container4 {
 	margin-left: 180px;
 	margin-top: 10px;
+}
+
+/********************* Timer Widget ***********************/
+
+div.body-timer{
+  font-family: -apple-system, 
+  BlinkMacSystemFont, 
+  "Segoe UI", 
+  Roboto, 
+  Oxygen-Sans, 
+  Ubuntu, 
+  Cantarell, 
+  "Helvetica Neue", 
+  sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: -100px;
+}
+h1.headline {
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: .125rem;
+  margin-right: center;
+  margin-bottom: -20px;
+}
+
+li.li-timer {
+  display: inline-block;
+  font-size: 20px; /* The font of Days Word */
+  list-style-type: none;
+  padding: 5px;
+  text-transform: uppercase;
+  margin-top: -20px;
+}
+
+span#days, span#hours, span#minutes, span#seconds {
+  margin-top: 40px;
+  display: block;
+  font-size: 30px; /* The Number of Clock */
+}
+
+div.container-timer {
+  background-color: white;
+  text-align: center;
+  width: 400px;
+  height: 140px;
+  border-radius: 25px;
+  margin-bottom: -805px;
+  margin-left: 590px;
+  position: relative;
+  top: -20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+ul.counter-layout {
+  display: block;
+  justify-content: center;
+  padding: 0;
+}
+@media (max-width: 1180px) {
+  h1.headline {
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: .125rem;
+  margin-bottom: -20px;
+  position: relative;
+  top: 12px;
+  }
+  li.li-timer {
+  display: inline-block;
+  font-size: 20px; /* The font of Days Word */
+  list-style-type: none;
+  padding: 5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+  }
+  div.container-timer {
+  background-color: white;
+  text-align: center;
+  width: 370px;
+  height: 140px;
+  border-radius: 25px;
+  margin-bottom: -805px;
+  margin-left: 535px;
+  position: relative;
+  top: -20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  div.outer-grid {
+  display: block;
+  background-color: white;
+  border-radius: 25px 25px 25px 25px;
+  width: 540px;
+  height: 240px;
+  margin-left: 210px;
+  margin-top: -535px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.15), 
+              0px 4px 8px rgba(0,0,0,0.15), 
+              0px 8px 16px rgba(0,0,0,0.15), 
+              0px 16px 32px rgba(0,0,0,0.15);
+  }
+  div.column1 {
+  width: 260px;
+  }
+  div.column2 {
+  width: 260px;
+  margin-left: 280px;
+  }
+  div.column3 {
+  width: 260px;
+  margin-left: 280px;
+  margin-top: 20px; /* Both Column 3 & 4 move together */
+  }
+  div.column4 {
+  width: 260px;
+  }
+  .switch {
+    position: relative;
+    right: 20px;
+  }
 }
