@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
     <head>
@@ -16,11 +17,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
     </head>
 <body>
+<!------------------Side Navigation -------------------------->
+  <div class="Header">
+    <div class="side-nav">
+      <a href="#" class="logo">
+        <img src="/assets/Smart Plant.png" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#"><i></i><p>Dashboard</p></a></li>
+        <li><a href="/Dashboard.html"><i><img class = "image-con" src="/assets/home.png"></i><p>Home</p></a></li>
+        <li><a href="#"><i><img class = "image-con" src="/assets/user.png"></i><p>Account</p></a></li>
+        <li><a href="#"><i><img class = "image-con" src="/assets/settings.png"></i><p>Setting</p></a></li>
+        <li><a class="ai-img" href="Dashboard-ai-testing.html"><i><img class = "image-con" src="/assets/scanning.png"></i><p>AI Image</p></a></li>
+        <div class="active-nav"></div>
+      </ul>
+    <div>
+  </div>
 <!--------------------- Container Plant List For Detection ---------------------->
 <h1 class='h1-ai-image'> Get Instant & Accurate Crop Disease Detection with Smart Plant</h1>
         <div class="container" id="crops-list">
-                    <h5>Agent Crops currently supports the following Crops and their diseases:</h5>
-                </div>
+            <h5 class="h5-ai-image">Smart Plant currently supports the following Crops and their diseases:</h5>
+        </div>
                 <br>
                 <div class="container custom-bg-color rounded" style="padding-top: 12px; padding-bottom: 12px;">
                     <nav>
@@ -154,25 +171,32 @@
     <div class="container-ai-image">
         <form action="https://agentcrop.azurewebsites.net/api/predict" method = "POST" enctype = "multipart/form-data" id="api-form">
             <input type="file" name="files" multiple required />
-            <input type="submit" value="submit"/>
+            <input type="submit" value="submit" onclick="workingData(data)" />
         </form>
     </div>
 
         <div id="show-data"></div>
         <script>
-
             // Function to work with your data.
             function workWithData(data) {
-
+                document.getElementById('show-data').style.backgroundColor = "lightblue";
+                document.getElementById('show-data').style.display = "block";
+                document.getElementById('show-data').style.position = "relative";
+                document.getElementById('show-data').style.width = "1010px";
+                document.getElementById('show-data').style.height = "400px";
+                document.getElementById('show-data').style.left = "230px";
+                document.getElementById('show-data').style.top = "50px";
+                document.getElementById('show-data').style.borderRadius = "25px";
+                document.getElementById('show-data').style.padding = "12px";
                 // Here you can simply show data using iterating through it or you can do whatever you want with it.
                 document.getElementById('show-data').innerHTML = "";
                 for (let imageName in data) {
                     document.getElementById('show-data').innerHTML += "<h3>" + imageName + ": </h3>";
                     for (let detail in data[imageName]) {
                         document.getElementById('show-data').innerHTML += "<p><strong>" + detail.replace(detail[0], detail[0].toUpperCase()) + ": </strong>" + data[imageName][detail] + "</p>";
+                        }
                     }
                 }
-            }
 
             // Function to handle submit event.
             function handleFormSubmit(event) {
