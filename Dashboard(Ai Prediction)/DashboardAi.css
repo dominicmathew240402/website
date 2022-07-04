@@ -3,7 +3,7 @@ html {
 }
 .container {
     position: relative;
-    top: -460px;
+    top: -560px;
     left: 200px;
 }
 h5.h5-ai-image {
@@ -59,9 +59,9 @@ h1.h1-ai-image {
     color: black;
     position: relative;
     right: -200px;
-    padding-bottom: 8px;
+    padding-bottom: 60px;
     width: 800px;
-    top: -480px;
+    top: -520px;
 }
 div.container-ai-image {
     color: black;
@@ -75,7 +75,14 @@ ul.plant-list {
 div#show-data {
   background-color: transparent;
 }
-
+@media (max-width: 1180px) {
+  .custom-bg-color {
+    width: 900px;
+  }
+  div.container-ai-image {
+    top: 560px;
+}
+}
 /*************************** Side Navigation *******************************/
 a.ai-img {
     width: 200px;
@@ -97,21 +104,21 @@ a.ai-img {
 }
 .logo {
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-left: 20px ;
 }
 .logo-img {
   width: 100px;
 }
 ul.nav-links {
-    left: -40px;
+    left: -30px;
 }
 .nav-links{
   list-style: none;
   position: relative;
 }
 .nav-links li {
-  padding: 10px 0;
+  padding: 8px 0;
 }
 .nav-links li a {
   color: #fff;
@@ -171,11 +178,15 @@ position: relative;
   }
   .logo {
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-left: 20px ;
   }
   .logo-img {
     width: 100px;
+  }
+  ul.nav-links {
+    left: -32px;
+    top: 12px; 
   }
 }
 /* My iPhone */
