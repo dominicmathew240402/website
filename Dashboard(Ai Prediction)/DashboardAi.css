@@ -1,6 +1,20 @@
 html {
     scroll-behavior: smooth;
 }
+.container {
+    position: relative;
+    top: -460px;
+    left: 200px;
+}
+h5.h5-ai-image {
+    display: block;
+    position: relative;
+    margin-right: -600px;
+    margin-top: -40px;
+    right: 10px;
+    top: 30px;
+}
+
 a.nav-link {
     opacity: 0.75 !important;
     color: white !important;
@@ -44,21 +58,164 @@ h1.h1-ai-image {
     font-size: 26px;
     color: black;
     position: relative;
-    right: -180px;
-    padding-bottom: 40px;
+    right: -200px;
+    padding-bottom: 8px;
+    width: 800px;
+    top: -480px;
 }
 div.container-ai-image {
     color: black;
     position: relative;
-    left: 400px;
-    top: 40px;
-    padding-bottom: 60px;
+    margin-left: 500px;
+    top: 520px;
 }
 ul.plant-list {
     color: black;
 }
 div#show-data {
-    padding-bottom: 0px;
-    position: relative;
-    left: 200px;
+  background-color: transparent;
+}
+
+/*************************** Side Navigation *******************************/
+a.ai-img {
+    width: 200px;
+}
+.header {
+  width: 100%;
+  height: 100%;
+}
+.side-nav {
+  width: 200px;
+  height: 100%;
+  background: #0d74f5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+  font-family: 'Poppins',sans-serif;
+}
+.logo {
+  display: block;
+  margin-bottom: 40px;
+  margin-left: 20px ;
+}
+.logo-img {
+  width: 100px;
+}
+ul.nav-links {
+    left: -40px;
+}
+.nav-links{
+  list-style: none;
+  position: relative;
+}
+.nav-links li {
+  padding: 10px 0;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+}
+.nav-links li a i {
+  font-size: 22px;
+  margin-right: 20px;
+}
+.active-nav {
+  background: #fff;
+  width: 100%;
+  height: 46px;
+  position: absolute;
+  left: 30px;
+  top: 2.6%;
+  z-index: -1;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.4);
+  display: none;
+  transition: top 0.5s;
+}
+img.image-con{
+position: relative;
+  width: 20px;
+  top: -10px;
+}
+.nav-links li:hover a {
+  color: #0d74f5;
+  transition: 0.3s;
+}
+.nav-links li:hover ~.active-nav {
+  display: block;
+}
+.nav-links li:nth-child(1):hover ~ .active-nav {
+  top: 2.6%;
+}
+.nav-links li:nth-child(2):hover ~ .active-nav {
+  top: 20%;
+}
+.nav-links li:nth-child(3):hover ~ .active-nav {
+  top: 41%;
+}
+.nav-links li:nth-child(4):hover ~ .active-nav{
+  top: 61%;
+}
+.nav-links li:nth-child(5):hover ~ .active-nav{
+  top: 82%;
+}
+/* Ipad Air */
+@media (max-width: 1180px) {
+  .side-nav{
+    width: 200px;
+  }
+  .logo {
+  display: block;
+  margin-bottom: 50px;
+  margin-left: 20px ;
+  }
+  .logo-img {
+    width: 100px;
+  }
+}
+/* My iPhone */
+@media (max-width: 379px) {
+  .side-nav{
+    width: 100px;
+  }
+  .logo-icon {
+    display: block;
+  }
+  .logo {
+  display: block;
+  margin-bottom: 50px;
+  margin-left: -19px ;
+  }
+  .logo-img {
+    width: 80px;
+  }
+  .nav-links li a i{
+    margin-right: 0;
+  }
+  .nav-links li a {
+    justify-content: center;
+  }
+  .image-con {
+    width: 30px;
+  }
+  .nav-links li a p {
+    display: none;
+  }
+  .nav-links li:nth-child(2):hover ~ .active-nav {
+  top: 17%;
+  }
+  .nav-links li:nth-child(3):hover ~ .active-nav {
+  top: 38%;
+  }
+  .nav-links li:nth-child(4):hover ~ .active-nav {
+    top: 60%;
+  }
+  .nav-links li:nth-child(5):hover ~ .active-nav {
+    top: 82%;
+  }
 }
