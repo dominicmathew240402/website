@@ -3,14 +3,14 @@ html {
 }
 .container {
     position: relative;
-    top: -560px;
+    top: -480px;
     left: 200px;
 }
 h5.h5-ai-image {
     display: block;
     position: relative;
     margin-right: -600px;
-    margin-top: -40px;
+    margin-top: -150px;
     right: 10px;
     top: 30px;
 }
@@ -61,7 +61,7 @@ h1.h1-ai-image {
     right: -200px;
     padding-bottom: 60px;
     width: 800px;
-    top: -520px;
+    top: -550px;
 }
 div.container-ai-image {
     color: black;
@@ -81,7 +81,24 @@ div#show-data {
   }
   div.container-ai-image {
     top: 560px;
+  }
 }
+@media (max-width: 379px) {
+  .container {
+    left: 50px;
+    top: -560px;
+  }
+  .custom-bg-color {
+    width: 280px;
+  }
+  div.container-ai-image {
+    margin-left: 100px;
+    top: 620px;
+  }
+  h5.h5-ai-image {
+    font-size: 14px;
+    width: 280px;
+  }
 }
 /*************************** Side Navigation *******************************/
 a.ai-img {
@@ -111,14 +128,15 @@ a.ai-img {
   width: 100px;
 }
 ul.nav-links {
-    left: -30px;
+    left: -32px;
 }
 .nav-links{
   list-style: none;
   position: relative;
+  bottom: 1px;
 }
 .nav-links li {
-  padding: 8px 0;
+  padding: 10px 0;
 }
 .nav-links li a {
   color: #fff;
@@ -147,7 +165,7 @@ ul.nav-links {
 img.image-con{
 position: relative;
   width: 20px;
-  top: -10px;
+  top: -12px;
 }
 .nav-links li:hover a {
   color: #0d74f5;
@@ -192,7 +210,7 @@ position: relative;
 /* My iPhone */
 @media (max-width: 379px) {
   .side-nav{
-    width: 100px;
+    width: 60px;
   }
   .logo-icon {
     display: block;
@@ -200,16 +218,19 @@ position: relative;
   .logo {
   display: block;
   margin-bottom: 50px;
-  margin-left: -19px ;
+  margin-left: -20px ;
   }
   .logo-img {
-    width: 80px;
+    position: relative;
+    width: 50px;
+    left: -8px;
+  }
+  ul.nav-links {
+    display: block;
+    left: -60px;
   }
   .nav-links li a i{
     margin-right: 0;
-  }
-  .nav-links li a {
-    justify-content: center;
   }
   .image-con {
     width: 30px;
