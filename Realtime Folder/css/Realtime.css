@@ -47,7 +47,7 @@ div.row {
 	width: 400px;
 	display: inline-block;
 	margin-left: -20px;
-	margin-top: 55px;
+	margin-top: 336px;
 }
 div.column1 {
 	width: 280px;
@@ -96,6 +96,39 @@ div.column4 {
               0px 8px 16px rgba(0,0,0,0.15), 
               0px 16px 32px rgba(0,0,0,0.15);
 }
+div.column5 {
+  position: relative;
+  width: 400px;
+  height: 380px;
+  margin-left: 590px;
+  margin-top: -385px;
+  display: block;
+  border-radius: 25px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.15), 
+              0px 4px 8px rgba(0,0,0,0.15), 
+              0px 8px 16px rgba(0,0,0,0.15), 
+              0px 16px 32px rgba(0,0,0,0.15);
+}
+div.column5-TotalPowerConsumption {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 12px;
+  top: 20px;
+  background-color: #e6e6e6;
+  width: 160px;
+  height: 180px;
+  left: 20px;
+}
+div.column5-PowerUsage {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 12px;
+  top: -160px;
+  background-color: #e6e6e6;
+  width: 160px;
+  height: 180px;
+  left: 220px;
+}
 p.p1 {
 	position: relative;
 	top: 8px;
@@ -116,6 +149,25 @@ p.p4 {
 	top: 8px;
 	color: black;
 }
+p.p5 {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  color: black;
+}
+p.p5-TotalPowerConsumption {
+  font-size: 12px;
+  position: relative;
+  top: 10px;
+  left: 12px;
+}
+p.p5-PowerUsage {
+  font-size: 12px;
+  position: relative;
+  top: 10px;
+  left: 46px;
+}
+
 @media (max-width: 1180px) {
   div.row {
     margin-top: 360px;
@@ -127,6 +179,20 @@ p.p4 {
   }
 }
 
+@media (max-width: 379px) {
+  div.row {
+    margin-top: 140px;
+  }
+  iframe {
+  width: 180px;
+  height: 140px;
+  margin-bottom: -545px;
+  margin-left: -10px;
+  }
+  li {
+    padding: 18px;
+  }
+}
 /******************** Side Nav Bar  **************************/
 * {
   margin: 0;
@@ -217,10 +283,6 @@ p.p4 {
 }
 /* Ipad Air */
 @media (max-width: 1180px) {
-  div.outer-grid {
-    margin-top: -540px;
-    margin-left: 200px;
-  }
   .side-nav{
     width: 200px;
   }
@@ -237,38 +299,42 @@ p.p4 {
   }
   .nav-links li:nth-child(1):hover ~ .active{
   top: 3%;
-}
-.nav-links li:nth-child(2):hover ~ .active{
-  top: 22%;
-}
-.nav-links li:nth-child(3):hover ~ .active{
-  top: 44%;
-}
-.nav-links li:nth-child(4):hover ~ .active{
-  top: 64%;
-}
-.nav-links li:nth-child(5):hover ~ .active{
-  top: 84%;
-}
+  }
+  .nav-links li:nth-child(2):hover ~ .active{
+    top: 22%;
+  }
+  .nav-links li:nth-child(3):hover ~ .active{
+    top: 44%;
+  }
+  .nav-links li:nth-child(4):hover ~ .active{
+    top: 64%;
+  }
+  .nav-links li:nth-child(5):hover ~ .active{
+    top: 84%;
+  }
 }
 /* My iPhone */
 @media (max-width: 379px) {
   .side-nav{
-    width: 100px;
+    width: 60px;
   }
   .logo-icon {
     display: block;
+    left: 10px;
   }
   .logo {
   display: block;
   margin-bottom: 50px;
-  margin-left: -19px ;
+  margin-left: -26px ;
   }
   .logo-img {
-    width: 80px;
+    width: 50px;
   }
   .nav-links li a i{
     margin-right: 0;
+  }
+  ul.nav-links {
+    left: -18px;
   }
   .nav-links li a {
     justify-content: center;
@@ -388,6 +454,10 @@ div.container4 {
 	margin-left: 180px;
 	margin-top: 10px;
 }
+div.container5 {
+  margin-left: 320px;
+  margin-top: 0px;
+}
 
 /********************* Timer Widget ***********************/
 
@@ -407,11 +477,13 @@ div.body-timer{
   margin-bottom: -100px;
 }
 h1.headline {
+  position: relative;
+  top: 14px;
   font-size: 30px;
   font-weight: normal;
   letter-spacing: .125rem;
   margin-right: center;
-  margin-bottom: -20px;
+  margin-bottom: 0px;
 }
 
 li.li-timer {
@@ -435,10 +507,10 @@ div.container-timer {
   width: 400px;
   height: 140px;
   border-radius: 25px;
-  margin-bottom: -805px;
+  margin-bottom: -560px;
   margin-left: 590px;
   position: relative;
-  top: -260px;
+  top: -18px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 ul.counter-layout {
@@ -446,6 +518,7 @@ ul.counter-layout {
   justify-content: center;
   padding: 0;
 }
+
 @media (max-width: 1180px) {
   h1.headline {
   font-size: 24px;
@@ -482,11 +555,6 @@ ul.counter-layout {
   width: 540px;
   height: 240px;
   margin-left: 210px;
-  margin-top: -535px;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.15), 
-              0px 4px 8px rgba(0,0,0,0.15), 
-              0px 8px 16px rgba(0,0,0,0.15), 
-              0px 16px 32px rgba(0,0,0,0.15);
   }
   div.column1 {
   width: 260px;
@@ -509,240 +577,94 @@ ul.counter-layout {
   }
 }
 
-/* Loading Animation */
-
-.h1-loading {
-  position: relative;
-  left: 44%;
-  color: black;
-  top: 360px;
-  font: Spartan;
-}
-
-.blob-1,.blob-2{
-  width:70px;
-  height:70px;
-  position:absolute;
-  background:#fff;
-  border-radius:50%;
-  top:50%;left:50%;
-  transform:translate(-50%,-50%);
-}
-.blob-1{
-  left:20%;
-  animation:osc-l 2.5s ease infinite;
-  background-color: #9999ff;
-}
-.blob-2{
-  left:80%;
-  animation:osc-r 2.5s ease infinite;
-  background:#0ff;
-}
-@keyframes osc-l{
-  0%{left:20%;}
-  50%{left:50%;}
-  100%{left:20%;}
-}
-@keyframes osc-r{
-  0%{left:80%;}
-  50%{left:50%;}
-  100%{left:80%;}
-}
-
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-/* Loading Animation */
-
-.h1-loading {
-  position: relative;
-  left: 44%;
-  color: black;
-  top: 360px;
-  font: Spartan;
-}
-
-.blob-1,.blob-2{
-  width:70px;
-  height:70px;
-  position:absolute;
-  background:#fff;
-  border-radius:50%;
-  top:50%;left:50%;
-  transform:translate(-50%,-50%);
-}
-.blob-1{
-  left:20%;
-  animation:osc-l 2.5s ease infinite;
-  background-color: #9999ff;
-}
-.blob-2{
-  left:80%;
-  animation:osc-r 2.5s ease infinite;
-  background:#0ff;
-}
-@keyframes osc-l{
-  0%{left:20%;}
-  50%{left:50%;}
-  100%{left:20%;}
-}
-@keyframes osc-r{
-  0%{left:80%;}
-  50%{left:50%;}
-  100%{left:80%;}
-}
-
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-/* Slider Range */
-
-.thermostat {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  top: 140px;
-  left: 590px;
-  background: #F2F2F2;
-  border-radius: 50%;
-  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.8);
-}
-
-.thermostat .control {
-  position: absolute;
-  z-index: 5;
-  width: 130px;
-  height: 130px;
-  top: 40px;
-  left: 35px;
-  background: #E6E6E6;
-  border-radius: 50%;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
-}
-.thermostat .control .temp_outside {
-  position: absolute;
-  top: 25px;
-  left: 6px;
-  right: 0;
-  text-align: center;
-  font-weight: 300;
-  font-size: 1rem;
-}
-.thermostat .control .temp_room {
-  position: absolute;
-  top: 34px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-weight: 400;
-  font-size: 60px;
-  line-height: 60px;
-  color: #873183;
-  letter-spacing: -8px;
-  opacity: 1;
-  transform: translateX(0);
-  transition: all .5s ease-in-out;
-}
-.thermostat .control .temp_room span {
-  position: absolute;
-  top: 0;
-  right: 37px;
-  font-size: 2rem;
-  line-height: 34px;
-  padding: 3px 0 0 7px;
-  color: #8e2275;
-}
-.room {
-  position: absolute;
-  bottom: 18px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-weight: 300;
-  font-size: 1rem;
-}
-.thermostat .ring {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  top: 10px;
-  left: 10px;
-  background: url("http://100dayscss.com/codepen/thermostat-gradient.jpg") center center no-repeat;
-  border-radius: 50%;
-  box-shadow: inset 2px 4px 4px 0px rgba(0, 0, 0, 0.3);
-}
-.thermostat .ring .bottom_overlay {
-  position: absolute;
-  width: 95px;
-  height: 95px;
-  top: 50%;
-  left: 50%;
-  background: #F2F2F2;
-  transform-origin: 0 0;
-  transform: rotate(45deg);
-  border-radius: 0 0 95px 0;
-}
-
-#slider {
-  position: absolute;
-  width: 170px;
-  height: 150px;
-  top: 200px;
-  left: 876px;
-  z-index: 1000;
-}
-
-#slider .rs-border  {
-    border-color: transparent;
-}
-.rs-control .rs-range-color, .rs-control .rs-path-color, .rs-control .rs-bg-color {
-    background-color: rgba(0, 0, 0, 0);
-}
-.rs-control .rs-handle {
-    background-color: fade-out(#522c6d, .2);
-}
-.rs-tooltip.edit, .rs-tooltip .rs-input, .rs-tooltip-text {
-  font-family: rubik, helvetica, sans-serif;
-  font-size: 3.3rem;
-  background: transparent;
-  color: #8e2275;
-  font-weight: 400;
-  top: 65%;
-  height: 3.9rem;
-  width: 4.5rem;
-}
-#slider:hover .rs-tooltip, .rs-tooltip:focus, .rs-tooltip-text:focus {
-  border: none;
-  transform: scale(1.1);
-  transition: .1s;
-}
-#slider .rs-transition  {
-  transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);
-}
-
-.fas {
-  animation: pulse 1s infinite;
-}
-@keyframes pulse {
-  50% {
-    transform: scale(.9);
+@media (max-width: 379px) {
+  div.outer-grid {
+    margin-left: 50px;
+    width: 200px;
+    height: 160px;
   }
+  div.container-timer {
+  
+  margin-bottom: -805px;
+  margin-left: -26px;
+  position: relative;
+  top: -80px;
+  }
+  .switch {
+    right: 130px;
+  }
+  .slider:after {
+    left: -20px;
+  }
+  div.column1 {
+  width: 120px;
+  }
+  div.column2 {
+  width: 120px;
+  margin-left: 140px;
+  }
+  div.column3 {
+  width: 120px;
+  margin-left: 140px;
+  }
+  div.column4 {
+  width: 120px;
+  }
+}
+/******* Loading Animation **********/
+
+h1.h1-loading {
+  position: absolute;
+  top: 60%; left: 40%;
+  color: black;
+  bottom: 80%;
+}
+
+@media (max-width: 375px) {
+  h1.h1-loading {
+  top: 60%;
+  left: 40%;
+  }
+}
+
+.blob-1,.blob-2{
+  width:70px;
+  height:70px;
+  position:absolute;
+  background:#fff;
+  border-radius:50%;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+}
+.blob-1{
+  left:20%;
+  animation:osc-l 2.5s ease infinite;
+  background-color: #9999ff;
+}
+.blob-2{
+  left:80%;
+  animation:osc-r 2.5s ease infinite;
+  background:#0ff;
+}
+@keyframes osc-l{
+  0%{left:20%;}
+  50%{left:50%;}
+  100%{left:20%;}
+}
+@keyframes osc-r{
+  0%{left:80%;}
+  50%{left:50%;}
+  100%{left:80%;}
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
 }
